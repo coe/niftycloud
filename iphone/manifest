@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.0.1
+apiversion: 2
+architectures: armv7 arm64 i386 x86_64
+description: th
+author: th
+license: th
+copyright: th
+
+# these should not be edited
+name: niftycloud
+moduleid: jp.coe.niftycloud
+guid: f652d945-9121-4ee7-a2ff-ca51e4be9c05
+platform: iphone
+minsdk: 4.1.0.GA
