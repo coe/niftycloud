@@ -9,7 +9,7 @@
 #import "TiBase.h"
 #import "TiHost.h"
 #import "TiUtils.h"
-//#import "NCMBWrapper.h"
+#import "NCMBWrapper.h"
 
 
 @implementation JpCoeNiftycloudModule
@@ -106,23 +106,23 @@
 	// example property setter
 }
 
-//-(void)increment:(id)args
-//{
-//    NSString* className = [args objectAtIndex:0];
-//    NSString* whereKey = [args objectAtIndex:1];
-//    NSString* equalTo = [args objectAtIndex:2];
-//    NSString* countKey = [args objectAtIndex:3];
-//    KrollCallback* callback = [args objectAtIndex:4];
-//    
-//    [NCMBWrapper increment:className whereKey:whereKey equalTo:equalTo countKey:countKey WithBlock:^(NSError *error) {
-//        NSArray* arr;
-//        if(error) {
-//            arr = @[@NO];
-//        } else {
-//            arr = @[@YES];
-//        }
-//        [callback call:arr thisObject:nil];
-//    }];
-//}
+-(void)increment:(id)args
+{
+    NSString* className = [args objectAtIndex:0];
+    NSString* whereKey = [args objectAtIndex:1];
+    NSString* equalTo = [args objectAtIndex:2];
+    NSString* countKey = [args objectAtIndex:3];
+    KrollCallback* callback = [args objectAtIndex:4];
+    
+    [NCMBWrapper increment:className whereKey:whereKey equalTo:equalTo countKey:countKey WithBlock:^(NSError *error) {
+        NSArray* arr;
+        if(error) {
+            arr = @[@NO];
+        } else {
+            arr = @[@YES];
+        }
+        [callback call:arr thisObject:nil];
+    }];
+}
 
 @end
