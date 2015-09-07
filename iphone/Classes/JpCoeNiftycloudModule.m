@@ -54,7 +54,7 @@
 -(void)dealloc
 {
 	// release any resources that have been retained by the module
-	[super dealloc];
+//	[super dealloc];
 }
 
 #pragma mark Internal Memory Management
@@ -104,6 +104,13 @@
 -(void)setExampleProp:(id)value
 {
 	// example property setter
+}
+
+-(void)start:(id)args
+{
+    NSString* applicationKey = [args objectAtIndex:0];
+    NSString* clientKey = [args objectAtIndex:1];
+    [NCMBWrapper start:applicationKey clientKey:clientKey];
 }
 
 -(void)increment:(id)args
