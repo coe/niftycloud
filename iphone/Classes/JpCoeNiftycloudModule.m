@@ -10,6 +10,7 @@
 #import "TiHost.h"
 #import "TiUtils.h"
 #import "NCMBWrapper.h"
+#import "NCMB.h"
 
 
 @implementation JpCoeNiftycloudModule
@@ -115,6 +116,8 @@
 
 -(void)increment:(id)args
 {
+    NSLog(@"%s%d",__func__,__LINE__);
+    
     NSString* className = [args objectAtIndex:0];
     NSString* whereKey = [args objectAtIndex:1];
     NSString* equalTo = [args objectAtIndex:2];
@@ -128,7 +131,47 @@
         } else {
             arr = @[@YES];
         }
+        NSLog(@"%s%d  %@",__FUNCTION__,__LINE__,arr);
         [callback call:arr thisObject:nil];
+    }];
+}
+
+-(void)findObject:(id)args {
+    NSLog(@"%s%d",__func__,__LINE__);
+    
+    NSString* className = [args objectAtIndex:0];
+    NSString* whereKey = [args objectAtIndex:1];
+    NSString* equalTo = [args objectAtIndex:2];
+    NSString* key = [args objectAtIndex:3];
+    KrollCallback* callback = [args objectAtIndex:4];
+    
+    [NCMBWrapper findObjects:className whereKey:whereKey equalTo:equalTo WithBlock:^(NSArray *posts, NSError *error) {
+        NSArray* arr;
+        if(error) {
+            arr = @[@NO];
+            [callback call:arr thisObject:nil];
+
+        } else {
+            NSMutableArray* marr = [NSMutableArray arrayWithCapacity:1];
+            for (NCMBObject *post in posts) {
+                NSLog(@"%@", post);
+                
+                // objectForKeyアクセス
+                [marr addObject:[post objectForKey:key]];
+                
+                // プロパティアクセス
+                NSString *objectId = post.objectId;
+                NSDate *createdDate = post.createDate;
+                NSDate *updatedDate = post.updateDate;
+                NSLog(@"objectId: %@, updatedAt: %@, createdAt: %@", objectId, updatedDate, createdDate);
+                
+//                // 再取得
+//                [post refresh:nil];
+            }
+            NSLog(@"%s%d posts %@",__FUNCTION__,__LINE__,posts);
+            [callback call:marr thisObject:nil];
+        }
+        
     }];
 }
 

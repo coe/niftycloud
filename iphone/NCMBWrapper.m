@@ -82,6 +82,8 @@
 
 +(void)increment:(NSString*)className whereKey:(NSString*)whereKey equalTo:(NSString*)equalTo countKey:(NSString*)countKey WithBlock:(void (^)(NSError *error))block
 {
+    NSLog(@"%s%d",__func__,__LINE__);
+
     NCMBQuery *query = [NCMBQuery queryWithClassName:className];
     
     [query whereKey:whereKey equalTo:equalTo];

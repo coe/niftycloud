@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>922687AE-9266-4F8E-840E-127CF9E02761</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8A5F0FCDC5E77CA95097BA60B36B56C46B5A6354</key>
+		<string>github.com:NIFTYCloud-mbaas/ncmb_ios.git</string>
+		<key>9A95B187C00253D5314A7038C3887DA20F2134AA</key>
+		<string>github.com:coe/niftycloud.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iphone/niftycloud.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8A5F0FCDC5E77CA95097BA60B36B56C46B5A6354</key>
+		<string>../../..ncmb_ios</string>
+		<key>9A95B187C00253D5314A7038C3887DA20F2134AA</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:coe/niftycloud.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9A95B187C00253D5314A7038C3887DA20F2134AA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9A95B187C00253D5314A7038C3887DA20F2134AA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>niftycloud</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8A5F0FCDC5E77CA95097BA60B36B56C46B5A6354</string>
+			<key>IDESourceControlWCCName</key>
+			<string>niftycloudncmb_ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>
